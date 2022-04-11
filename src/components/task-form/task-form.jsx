@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PriorityEnum from '../../enums/priority-enum';
+import style from './task-form.module.css';
 
 const TaskForm = (props) => {
     const [name, setName] = useState('');
@@ -21,21 +22,21 @@ const TaskForm = (props) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={style.form}>
             <div>
-                <label htmlFor="task-name">Nom : </label>
+                <label htmlFor="task-name">Nom</label>
                 <input type="text" id="task-name" required
                     value={name}
                     onChange={(e) => setName(e.target.value)} />
             </div>
             <div>
-                <label htmlFor="task-desc">Description : </label>
+                <label htmlFor="task-desc">Description</label>
                 <textarea id="task-desc"
                     value={desc}
                     onChange={(e) => setDesc(e.target.value)} />
             </div>
             <div>
-                <label htmlFor="task-priority">Priorité : </label>
+                <label htmlFor="task-priority">Priorité</label>
                 <select id="task-priority"
                     value={priority}
                     onChange={(e) => setPriority(e.target.value)}>
