@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import TaskForm from '../../components/task-form/task-form';
+import TaskForm from '../../components/task-form/task-form-v2';
 import { nanoid } from 'nanoid';
 import TaskList from '../../components/task-list/task-list';
 
